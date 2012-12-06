@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		960C403B1533668B00DFA3F9 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C403A1533668B00DFA3F9 /* Item.m */; };
+		9639300B152CF9E400806C26 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9639300A152CF9E400806C26 /* AssetsLibrary.framework */; };
+		9698DAE31502A7AF00F6F23D /* MasterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698DAE11502A7AE00F6F23D /* MasterTableCell.m */; };
+		9698DAE41502A7AF00F6F23D /* MasterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9698DAE21502A7AF00F6F23D /* MasterTableCell.xib */; };
+		9698DAEE150CEB0300F6F23D /* masterBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 9698DAED150CEB0300F6F23D /* masterBG.png */; };
+		9698DB661520B9DE00F6F23D /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698DB651520B9DE00F6F23D /* UILabel+VerticalAlign.m */; };
+		9698DB6C1523997800F6F23D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9698DB6B1523997700F6F23D /* QuartzCore.framework */; };
+		9698DB7515239E9B00F6F23D /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698DB7215239E9A00F6F23D /* Common.m */; };
+		9698DB7615239E9B00F6F23D /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698DB7415239E9B00F6F23D /* CustomCellBackground.m */; };
+		9698DB821524AD3400F6F23D /* AddEntryVC_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698DB801524AD3300F6F23D /* AddEntryVC_iPad.m */; };
+		9698DB831524AD3400F6F23D /* AddEntryVC_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9698DB811524AD3400F6F23D /* AddEntryVC_iPad.xib */; };
+		9698DB851524BD8700F6F23D /* madiera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9698DB841524BD8700F6F23D /* madiera.jpg */; };
+		9698DB881524DC1200F6F23D /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698DB871524DC1200F6F23D /* UIPlaceHolderTextView.m */; };
+		96A98E8F14E0AF9300E5B206 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A98E8E14E0AF9300E5B206 /* CoreDataManager.m */; };
+		96A98E9614E0B3E500E5B206 /* WhiskyItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A98E9514E0B3E500E5B206 /* WhiskyItemObject.m */; };
+		96B31BFE14D8D80D00D3B8A6 /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B31BFC14D8D80D00D3B8A6 /* AddEntryViewController.m */; };
+		96B31BFF14D8D80D00D3B8A6 /* AddEntryViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B31BFD14D8D80D00D3B8A6 /* AddEntryViewController_iPhone.xib */; };
+		96B31C0114D8D88200D3B8A6 /* AddEntryViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B31C0014D8D88200D3B8A6 /* AddEntryViewController_iPad.xib */; };
+		96CC19EB149D3B4D0015EE52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC19EA149D3B4D0015EE52 /* UIKit.framework */; };
+		96CC19ED149D3B4D0015EE52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC19EC149D3B4D0015EE52 /* Foundation.framework */; };
+		96CC19EF149D3B4D0015EE52 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC19EE149D3B4D0015EE52 /* CoreGraphics.framework */; };
+		96CC19F1149D3B4D0015EE52 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC19F0149D3B4D0015EE52 /* CoreData.framework */; };
+		96CC19F7149D3B4D0015EE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96CC19F5149D3B4D0015EE52 /* InfoPlist.strings */; };
+		96CC19F9149D3B4D0015EE52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC19F8149D3B4D0015EE52 /* main.m */; };
+		96CC19FD149D3B4D0015EE52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC19FC149D3B4D0015EE52 /* AppDelegate.m */; };
+		96CC1A00149D3B4D0015EE52 /* Whisky_Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96CC19FE149D3B4D0015EE52 /* Whisky_Notes.xcdatamodeld */; };
+		96CC1A03149D3B4D0015EE52 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC1A02149D3B4D0015EE52 /* MasterViewController.m */; };
+		96CC1A06149D3B4D0015EE52 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC1A05149D3B4D0015EE52 /* DetailViewController.m */; };
+		96CC1A09149D3B4D0015EE52 /* MasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CC1A07149D3B4D0015EE52 /* MasterViewController_iPhone.xib */; };
+		96CC1A0C149D3B4D0015EE52 /* MasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CC1A0A149D3B4D0015EE52 /* MasterViewController_iPad.xib */; };
+		96CC1A0F149D3B4D0015EE52 /* DetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CC1A0D149D3B4D0015EE52 /* DetailViewController_iPhone.xib */; };
+		96CC1A12149D3B4D0015EE52 /* DetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CC1A10149D3B4D0015EE52 /* DetailViewController_iPad.xib */; };
+		96CC1A1A149D3B4D0015EE52 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC1A19149D3B4D0015EE52 /* SenTestingKit.framework */; };
+		96CC1A1B149D3B4D0015EE52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC19EA149D3B4D0015EE52 /* UIKit.framework */; };
+		96CC1A1C149D3B4D0015EE52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC19EC149D3B4D0015EE52 /* Foundation.framework */; };
+		96CC1A1D149D3B4D0015EE52 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC19F0149D3B4D0015EE52 /* CoreData.framework */; };
+		96CC1A25149D3B4D0015EE52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96CC1A23149D3B4D0015EE52 /* InfoPlist.strings */; };
+		96CC1A28149D3B4D0015EE52 /* Whisky_NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC1A27149D3B4D0015EE52 /* Whisky_NotesTests.m */; };
+		96E9AA82153E1D7300CC1481 /* AppStoreSubmissionV1b.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 96E9AA81153E1D7300CC1481 /* AppStoreSubmissionV1b.mobileprovision */; };
+		96E9AA83153E1D7300CC1481 /* AppStoreSubmissionV1b.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 96E9AA81153E1D7300CC1481 /* AppStoreSubmissionV1b.mobileprovision */; };
+		96E9AA86153E494200CC1481 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E9AA84153E494200CC1481 /* Icon-72.png */; };
+		96E9AA87153E494200CC1481 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E9AA84153E494200CC1481 /* Icon-72.png */; };
+		96E9AA88153E494200CC1481 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E9AA85153E494200CC1481 /* Icon.png */; };
+		96E9AA89153E494200CC1481 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E9AA85153E494200CC1481 /* Icon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96CC1A1E149D3B4D0015EE52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CC19DD149D3B4C0015EE52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CC19E5149D3B4D0015EE52;
+			remoteInfo = "Whisky Notes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		960C40391533668B00DFA3F9 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		960C403A1533668B00DFA3F9 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		9639300A152CF9E400806C26 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		9698DAE01502A7AE00F6F23D /* MasterTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterTableCell.h; sourceTree = "<group>"; };
+		9698DAE11502A7AE00F6F23D /* MasterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterTableCell.m; sourceTree = "<group>"; };
+		9698DAE21502A7AF00F6F23D /* MasterTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterTableCell.xib; sourceTree = "<group>"; };
+		9698DAED150CEB0300F6F23D /* masterBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = masterBG.png; sourceTree = "<group>"; };
+		9698DB641520B9DD00F6F23D /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
+		9698DB651520B9DE00F6F23D /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
+		9698DB6B1523997700F6F23D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9698DB7115239E9A00F6F23D /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = "Whisky Notes/Common.h"; sourceTree = "<group>"; };
+		9698DB7215239E9A00F6F23D /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = "Whisky Notes/Common.m"; sourceTree = "<group>"; };
+		9698DB7315239E9A00F6F23D /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCellBackground.h; path = "Whisky Notes/CustomCellBackground.h"; sourceTree = "<group>"; };
+		9698DB7415239E9B00F6F23D /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomCellBackground.m; path = "Whisky Notes/CustomCellBackground.m"; sourceTree = "<group>"; };
+		9698DB7F1524AD3300F6F23D /* AddEntryVC_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEntryVC_iPad.h; sourceTree = "<group>"; };
+		9698DB801524AD3300F6F23D /* AddEntryVC_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEntryVC_iPad.m; sourceTree = "<group>"; };
+		9698DB811524AD3400F6F23D /* AddEntryVC_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEntryVC_iPad.xib; sourceTree = "<group>"; };
+		9698DB841524BD8700F6F23D /* madiera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = madiera.jpg; sourceTree = "<group>"; };
+		9698DB861524DC1100F6F23D /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		9698DB871524DC1200F6F23D /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		96A98E8D14E0AF9300E5B206 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		96A98E8E14E0AF9300E5B206 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		96A98E9414E0B3E500E5B206 /* WhiskyItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskyItemObject.h; sourceTree = "<group>"; };
+		96A98E9514E0B3E500E5B206 /* WhiskyItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskyItemObject.m; sourceTree = "<group>"; };
+		96B31BFB14D8D80D00D3B8A6 /* AddEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEntryViewController.h; sourceTree = "<group>"; };
+		96B31BFC14D8D80D00D3B8A6 /* AddEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEntryViewController.m; sourceTree = "<group>"; };
+		96B31BFD14D8D80D00D3B8A6 /* AddEntryViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEntryViewController_iPhone.xib; sourceTree = "<group>"; };
+		96B31C0014D8D88200D3B8A6 /* AddEntryViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEntryViewController_iPad.xib; sourceTree = "<group>"; };
+		96CC19E6149D3B4D0015EE52 /* Whisky Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whisky Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CC19EA149D3B4D0015EE52 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96CC19EC149D3B4D0015EE52 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96CC19EE149D3B4D0015EE52 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96CC19F0149D3B4D0015EE52 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		96CC19F4149D3B4D0015EE52 /* Whisky Notes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Whisky Notes-Info.plist"; sourceTree = "<group>"; };
+		96CC19F6149D3B4D0015EE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96CC19F8149D3B4D0015EE52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96CC19FA149D3B4D0015EE52 /* Whisky Notes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Whisky Notes-Prefix.pch"; sourceTree = "<group>"; };
+		96CC19FB149D3B4D0015EE52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96CC19FC149D3B4D0015EE52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96CC19FF149D3B4D0015EE52 /* Whisky_Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Whisky_Notes.xcdatamodel; sourceTree = "<group>"; };
+		96CC1A01149D3B4D0015EE52 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		96CC1A02149D3B4D0015EE52 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		96CC1A04149D3B4D0015EE52 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		96CC1A05149D3B4D0015EE52 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		96CC1A08149D3B4D0015EE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPhone.xib; sourceTree = "<group>"; };
+		96CC1A0B149D3B4D0015EE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPad.xib; sourceTree = "<group>"; };
+		96CC1A0E149D3B4D0015EE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		96CC1A11149D3B4D0015EE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPad.xib; sourceTree = "<group>"; };
+		96CC1A18149D3B4D0015EE52 /* Whisky NotesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Whisky NotesTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CC1A19149D3B4D0015EE52 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		96CC1A22149D3B4D0015EE52 /* Whisky NotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Whisky NotesTests-Info.plist"; sourceTree = "<group>"; };
+		96CC1A24149D3B4D0015EE52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96CC1A26149D3B4D0015EE52 /* Whisky_NotesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Whisky_NotesTests.h; sourceTree = "<group>"; };
+		96CC1A27149D3B4D0015EE52 /* Whisky_NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Whisky_NotesTests.m; sourceTree = "<group>"; };
+		96E9AA81153E1D7300CC1481 /* AppStoreSubmissionV1b.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppStoreSubmissionV1b.mobileprovision; sourceTree = "<group>"; };
+		96E9AA84153E494200CC1481 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		96E9AA85153E494200CC1481 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96CC19E3149D3B4D0015EE52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9639300B152CF9E400806C26 /* AssetsLibrary.framework in Frameworks */,
+				9698DB6C1523997800F6F23D /* QuartzCore.framework in Frameworks */,
+				96CC19EB149D3B4D0015EE52 /* UIKit.framework in Frameworks */,
+				96CC19ED149D3B4D0015EE52 /* Foundation.framework in Frameworks */,
+				96CC19EF149D3B4D0015EE52 /* CoreGraphics.framework in Frameworks */,
+				96CC19F1149D3B4D0015EE52 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CC1A14149D3B4D0015EE52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CC1A1A149D3B4D0015EE52 /* SenTestingKit.framework in Frameworks */,
+				96CC1A1B149D3B4D0015EE52 /* UIKit.framework in Frameworks */,
+				96CC1A1C149D3B4D0015EE52 /* Foundation.framework in Frameworks */,
+				96CC1A1D149D3B4D0015EE52 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96CC19DB149D3B4C0015EE52 = {
+			isa = PBXGroup;
+			children = (
+				96E9AA84153E494200CC1481 /* Icon-72.png */,
+				96E9AA85153E494200CC1481 /* Icon.png */,
+				96E9AA81153E1D7300CC1481 /* AppStoreSubmissionV1b.mobileprovision */,
+				9639300A152CF9E400806C26 /* AssetsLibrary.framework */,
+				9698DB7115239E9A00F6F23D /* Common.h */,
+				9698DB7215239E9A00F6F23D /* Common.m */,
+				9698DB7315239E9A00F6F23D /* CustomCellBackground.h */,
+				9698DB7415239E9B00F6F23D /* CustomCellBackground.m */,
+				9698DB6B1523997700F6F23D /* QuartzCore.framework */,
+				96CC19F2149D3B4D0015EE52 /* Whisky Notes */,
+				96CC1A20149D3B4D0015EE52 /* Whisky NotesTests */,
+				96CC19E9149D3B4D0015EE52 /* Frameworks */,
+				96CC19E7149D3B4D0015EE52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96CC19E7149D3B4D0015EE52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96CC19E6149D3B4D0015EE52 /* Whisky Notes.app */,
+				96CC1A18149D3B4D0015EE52 /* Whisky NotesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96CC19E9149D3B4D0015EE52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96CC19EA149D3B4D0015EE52 /* UIKit.framework */,
+				96CC19EC149D3B4D0015EE52 /* Foundation.framework */,
+				96CC19EE149D3B4D0015EE52 /* CoreGraphics.framework */,
+				96CC19F0149D3B4D0015EE52 /* CoreData.framework */,
+				96CC1A19149D3B4D0015EE52 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96CC19F2149D3B4D0015EE52 /* Whisky Notes */ = {
+			isa = PBXGroup;
+			children = (
+				9698DB841524BD8700F6F23D /* madiera.jpg */,
+				9698DB641520B9DD00F6F23D /* UILabel+VerticalAlign.h */,
+				9698DB651520B9DE00F6F23D /* UILabel+VerticalAlign.m */,
+				9698DAED150CEB0300F6F23D /* masterBG.png */,
+				96A98E8D14E0AF9300E5B206 /* CoreDataManager.h */,
+				96A98E8E14E0AF9300E5B206 /* CoreDataManager.m */,
+				96CC19FB149D3B4D0015EE52 /* AppDelegate.h */,
+				96CC19FC149D3B4D0015EE52 /* AppDelegate.m */,
+				96CC1A01149D3B4D0015EE52 /* MasterViewController.h */,
+				96CC1A02149D3B4D0015EE52 /* MasterViewController.m */,
+				96CC1A04149D3B4D0015EE52 /* DetailViewController.h */,
+				96CC1A05149D3B4D0015EE52 /* DetailViewController.m */,
+				96CC1A07149D3B4D0015EE52 /* MasterViewController_iPhone.xib */,
+				96CC1A0A149D3B4D0015EE52 /* MasterViewController_iPad.xib */,
+				96CC1A0D149D3B4D0015EE52 /* DetailViewController_iPhone.xib */,
+				96CC1A10149D3B4D0015EE52 /* DetailViewController_iPad.xib */,
+				960C40391533668B00DFA3F9 /* Item.h */,
+				960C403A1533668B00DFA3F9 /* Item.m */,
+				96CC19FE149D3B4D0015EE52 /* Whisky_Notes.xcdatamodeld */,
+				96CC19F3149D3B4D0015EE52 /* Supporting Files */,
+				96B31BFB14D8D80D00D3B8A6 /* AddEntryViewController.h */,
+				96B31BFC14D8D80D00D3B8A6 /* AddEntryViewController.m */,
+				96B31BFD14D8D80D00D3B8A6 /* AddEntryViewController_iPhone.xib */,
+				96B31C0014D8D88200D3B8A6 /* AddEntryViewController_iPad.xib */,
+				96A98E9414E0B3E500E5B206 /* WhiskyItemObject.h */,
+				96A98E9514E0B3E500E5B206 /* WhiskyItemObject.m */,
+				9698DAE01502A7AE00F6F23D /* MasterTableCell.h */,
+				9698DAE11502A7AE00F6F23D /* MasterTableCell.m */,
+				9698DAE21502A7AF00F6F23D /* MasterTableCell.xib */,
+				9698DB7F1524AD3300F6F23D /* AddEntryVC_iPad.h */,
+				9698DB801524AD3300F6F23D /* AddEntryVC_iPad.m */,
+				9698DB811524AD3400F6F23D /* AddEntryVC_iPad.xib */,
+				9698DB861524DC1100F6F23D /* UIPlaceHolderTextView.h */,
+				9698DB871524DC1200F6F23D /* UIPlaceHolderTextView.m */,
+			);
+			path = "Whisky Notes";
+			sourceTree = "<group>";
+		};
+		96CC19F3149D3B4D0015EE52 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96CC19F4149D3B4D0015EE52 /* Whisky Notes-Info.plist */,
+				96CC19F5149D3B4D0015EE52 /* InfoPlist.strings */,
+				96CC19F8149D3B4D0015EE52 /* main.m */,
+				96CC19FA149D3B4D0015EE52 /* Whisky Notes-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96CC1A20149D3B4D0015EE52 /* Whisky NotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				96CC1A26149D3B4D0015EE52 /* Whisky_NotesTests.h */,
+				96CC1A27149D3B4D0015EE52 /* Whisky_NotesTests.m */,
+				96CC1A21149D3B4D0015EE52 /* Supporting Files */,
+			);
+			path = "Whisky NotesTests";
+			sourceTree = "<group>";
+		};
+		96CC1A21149D3B4D0015EE52 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96CC1A22149D3B4D0015EE52 /* Whisky NotesTests-Info.plist */,
+				96CC1A23149D3B4D0015EE52 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96CC19E5149D3B4D0015EE52 /* Whisky Notes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CC1A2B149D3B4D0015EE52 /* Build configuration list for PBXNativeTarget "Whisky Notes" */;
+			buildPhases = (
+				96CC19E2149D3B4D0015EE52 /* Sources */,
+				96CC19E3149D3B4D0015EE52 /* Frameworks */,
+				96CC19E4149D3B4D0015EE52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Whisky Notes";
+			productName = "Whisky Notes";
+			productReference = 96CC19E6149D3B4D0015EE52 /* Whisky Notes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96CC1A17149D3B4D0015EE52 /* Whisky NotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CC1A2E149D3B4D0015EE52 /* Build configuration list for PBXNativeTarget "Whisky NotesTests" */;
+			buildPhases = (
+				96CC1A13149D3B4D0015EE52 /* Sources */,
+				96CC1A14149D3B4D0015EE52 /* Frameworks */,
+				96CC1A15149D3B4D0015EE52 /* Resources */,
+				96CC1A16149D3B4D0015EE52 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CC1A1F149D3B4D0015EE52 /* PBXTargetDependency */,
+			);
+			name = "Whisky NotesTests";
+			productName = "Whisky NotesTests";
+			productReference = 96CC1A18149D3B4D0015EE52 /* Whisky NotesTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96CC19DD149D3B4C0015EE52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 96CC19E0149D3B4C0015EE52 /* Build configuration list for PBXProject "Whisky Notes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96CC19DB149D3B4C0015EE52;
+			productRefGroup = 96CC19E7149D3B4D0015EE52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96CC19E5149D3B4D0015EE52 /* Whisky Notes */,
+				96CC1A17149D3B4D0015EE52 /* Whisky NotesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96CC19E4149D3B4D0015EE52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CC19F7149D3B4D0015EE52 /* InfoPlist.strings in Resources */,
+				96CC1A09149D3B4D0015EE52 /* MasterViewController_iPhone.xib in Resources */,
+				96CC1A0C149D3B4D0015EE52 /* MasterViewController_iPad.xib in Resources */,
+				96CC1A0F149D3B4D0015EE52 /* DetailViewController_iPhone.xib in Resources */,
+				96CC1A12149D3B4D0015EE52 /* DetailViewController_iPad.xib in Resources */,
+				96B31BFF14D8D80D00D3B8A6 /* AddEntryViewController_iPhone.xib in Resources */,
+				96B31C0114D8D88200D3B8A6 /* AddEntryViewController_iPad.xib in Resources */,
+				9698DAE41502A7AF00F6F23D /* MasterTableCell.xib in Resources */,
+				9698DAEE150CEB0300F6F23D /* masterBG.png in Resources */,
+				9698DB831524AD3400F6F23D /* AddEntryVC_iPad.xib in Resources */,
+				9698DB851524BD8700F6F23D /* madiera.jpg in Resources */,
+				96E9AA82153E1D7300CC1481 /* AppStoreSubmissionV1b.mobileprovision in Resources */,
+				96E9AA86153E494200CC1481 /* Icon-72.png in Resources */,
+				96E9AA88153E494200CC1481 /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CC1A15149D3B4D0015EE52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CC1A25149D3B4D0015EE52 /* InfoPlist.strings in Resources */,
+				96E9AA83153E1D7300CC1481 /* AppStoreSubmissionV1b.mobileprovision in Resources */,
+				96E9AA87153E494200CC1481 /* Icon-72.png in Resources */,
+				96E9AA89153E494200CC1481 /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96CC1A16149D3B4D0015EE52 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96CC19E2149D3B4D0015EE52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CC19F9149D3B4D0015EE52 /* main.m in Sources */,
+				96CC19FD149D3B4D0015EE52 /* AppDelegate.m in Sources */,
+				96CC1A00149D3B4D0015EE52 /* Whisky_Notes.xcdatamodeld in Sources */,
+				96CC1A03149D3B4D0015EE52 /* MasterViewController.m in Sources */,
+				96CC1A06149D3B4D0015EE52 /* DetailViewController.m in Sources */,
+				96B31BFE14D8D80D00D3B8A6 /* AddEntryViewController.m in Sources */,
+				96A98E8F14E0AF9300E5B206 /* CoreDataManager.m in Sources */,
+				96A98E9614E0B3E500E5B206 /* WhiskyItemObject.m in Sources */,
+				9698DAE31502A7AF00F6F23D /* MasterTableCell.m in Sources */,
+				9698DB661520B9DE00F6F23D /* UILabel+VerticalAlign.m in Sources */,
+				9698DB7515239E9B00F6F23D /* Common.m in Sources */,
+				9698DB7615239E9B00F6F23D /* CustomCellBackground.m in Sources */,
+				9698DB821524AD3400F6F23D /* AddEntryVC_iPad.m in Sources */,
+				9698DB881524DC1200F6F23D /* UIPlaceHolderTextView.m in Sources */,
+				960C403B1533668B00DFA3F9 /* Item.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CC1A13149D3B4D0015EE52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CC1A28149D3B4D0015EE52 /* Whisky_NotesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96CC1A1F149D3B4D0015EE52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CC19E5149D3B4D0015EE52 /* Whisky Notes */;
+			targetProxy = 96CC1A1E149D3B4D0015EE52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96CC19F5149D3B4D0015EE52 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CC19F6149D3B4D0015EE52 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96CC1A07149D3B4D0015EE52 /* MasterViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CC1A08149D3B4D0015EE52 /* en */,
+			);
+			name = MasterViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		96CC1A0A149D3B4D0015EE52 /* MasterViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CC1A0B149D3B4D0015EE52 /* en */,
+			);
+			name = MasterViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		96CC1A0D149D3B4D0015EE52 /* DetailViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CC1A0E149D3B4D0015EE52 /* en */,
+			);
+			name = DetailViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		96CC1A10149D3B4D0015EE52 /* DetailViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CC1A11149D3B4D0015EE52 /* en */,
+			);
+			name = DetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		96CC1A23149D3B4D0015EE52 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CC1A24149D3B4D0015EE52 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96CC1A29149D3B4D0015EE52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Propst (HMR7Z4S63Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matt Propst (HMR7Z4S63Q)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "C769A7F1-1AF7-402D-99DA-B5D29C8CF1B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C769A7F1-1AF7-402D-99DA-B5D29C8CF1B8";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96CC1A2A149D3B4D0015EE52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Propst (HMR7Z4S63Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matthew Propst";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "C769A7F1-1AF7-402D-99DA-B5D29C8CF1B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0C5C4FF5-7F13-468E-9EA8-FC5FC2FEDE73";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96CC1A2C149D3B4D0015EE52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Propst (HMR7Z4S63Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matt Propst (HMR7Z4S63Q)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Whisky Notes/Whisky Notes-Prefix.pch";
+				INFOPLIST_FILE = "Whisky Notes/Whisky Notes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C769A7F1-1AF7-402D-99DA-B5D29C8CF1B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C769A7F1-1AF7-402D-99DA-B5D29C8CF1B8";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96CC1A2D149D3B4D0015EE52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Propst (HMR7Z4S63Q)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Matthew Propst";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matthew Propst";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Whisky Notes/Whisky Notes-Prefix.pch";
+				INFOPLIST_FILE = "Whisky Notes/Whisky Notes-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C769A7F1-1AF7-402D-99DA-B5D29C8CF1B8";
+				"PROVISIONING_PROFILE[sdk=*]" = "0C5C4FF5-7F13-468E-9EA8-FC5FC2FEDE73";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0C5C4FF5-7F13-468E-9EA8-FC5FC2FEDE73";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		96CC1A2F149D3B4D0015EE52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Whisky Notes.app/Whisky Notes";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Whisky Notes/Whisky Notes-Prefix.pch";
+				INFOPLIST_FILE = "Whisky NotesTests/Whisky NotesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		96CC1A30149D3B4D0015EE52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Whisky Notes.app/Whisky Notes";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matthew Propst";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Whisky Notes/Whisky Notes-Prefix.pch";
+				INFOPLIST_FILE = "Whisky NotesTests/Whisky NotesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96CC19E0149D3B4C0015EE52 /* Build configuration list for PBXProject "Whisky Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CC1A29149D3B4D0015EE52 /* Debug */,
+				96CC1A2A149D3B4D0015EE52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CC1A2B149D3B4D0015EE52 /* Build configuration list for PBXNativeTarget "Whisky Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CC1A2C149D3B4D0015EE52 /* Debug */,
+				96CC1A2D149D3B4D0015EE52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CC1A2E149D3B4D0015EE52 /* Build configuration list for PBXNativeTarget "Whisky NotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CC1A2F149D3B4D0015EE52 /* Debug */,
+				96CC1A30149D3B4D0015EE52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		96CC19FE149D3B4D0015EE52 /* Whisky_Notes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				96CC19FF149D3B4D0015EE52 /* Whisky_Notes.xcdatamodel */,
+			);
+			currentVersion = 96CC19FF149D3B4D0015EE52 /* Whisky_Notes.xcdatamodel */;
+			path = Whisky_Notes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 96CC19DD149D3B4C0015EE52 /* Project object */;
+}
