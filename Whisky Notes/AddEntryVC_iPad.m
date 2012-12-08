@@ -28,6 +28,7 @@
 
 @synthesize imagePickerController;
 @synthesize imagePickerPopoverController;
+@synthesize activityIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,7 +70,7 @@
     
     //uuidField = [[NSString alloc] init];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if(![[defaults objectForKey:@"editEntry"] isEqualToString:@""]){
+    if(![[defaults objectForKey:@"editEntry"] isEqualToString:@""] && [defaults objectForKey:@"editEntry"] != NULL){
         if([defaults objectForKey:@"editEntry"]==nil){
             NSLog(@"equal to nil");
         }else {
@@ -108,6 +109,7 @@
 }
 - (void) viewWillAppear:(BOOL)animated 
 {
+    [activityIndicator setAlpha:1.0f];
 	[super viewWillAppear:animated];
 	NSLog(@"Registering for keyboard events");
     
@@ -500,7 +502,12 @@
 
 
 -(IBAction)clickedButton:(id)sender{
-
+    [activityIndicator setAlpha:1.0f];
+    UIView *blockerView = [[UIView alloc] initWithFrame:[self.view frame]];
+    [blockerView setBackgroundColor:[UIColor blackColor]];
+    [self.view addSubview:blockerView];
+    
+    
     wio = [[WhiskyItemObject alloc] init];
     [wio setName : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
     [wio setTimeStamp:[[NSDate alloc] init]];
@@ -528,8 +535,11 @@
     }
     NSLog(@"FIRST WIO: %@", wio);
     NSLog(@"FIRST NAME: %@", [wio name]);
-    NSLog(@"FRST UUID: %@", [wio uuid]);    
+    NSLog(@"FRST UUID: %@", [wio uuid]);
+
     [[CoreDataManager sharedManager] addOrUpdateWhisky:wio];
+    [activityIndicator setAlpha:1.0f];
+    [self.view removeFromSuperview];
 //    itemWhisky = [[CoreDataManager sharedManager] getLastWhisky];
 //    
 //    NSLog(@"%@", itemWhisky);

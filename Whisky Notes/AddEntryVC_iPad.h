@@ -61,6 +61,7 @@
 @property (nonatomic) IBOutlet UIImageView *imgView;
 @property (nonatomic) IBOutlet UIImage *myImg;
 @property (nonatomic) IBOutlet UIButton *imageBtn;
+@property (nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (UIButton *)cancelButton;
 - (UIButton *)saveButton;
