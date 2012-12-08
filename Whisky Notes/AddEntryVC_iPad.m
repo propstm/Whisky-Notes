@@ -58,9 +58,7 @@
     
     self.title = @"Add/Edit Entry";
     myImg = [UIImage imageNamed:@"madiera.jpg"];
-    if(imgView == nil){
-        imgView = [[UIImageView alloc] init];
-    }
+    
     //imgView.contentMode = UIViewContentModeScaleAspectFill;
     // Do any additional setup after loading the view from its nib.
    // self.view.backgroundColor = self.view.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:240.0f/255.0f alpha:1.0f];
@@ -208,240 +206,203 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cell";
-
-    UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellIdentifier];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        // Add the text field or add the text view.
-        // Set the tag value to some value like 1.
-        
-//        UITextField *textField = [[UITextField alloc] init];
-//        [textField setTag:1];
-  
-    }
-
     
-    
-    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(aTableView == topTableView){
-        UITextField *txtField = [[UITextField alloc] init];
-        txtField.delegate = self;
-        CGRect frame = cell.frame;
-
-        frame.origin.x = cell.frame.origin.x + 10;
-        frame.origin.y = cell.frame.origin.y + 10;
-        frame.size.width = 350;
-        [txtField setFrame:frame];
-        switch (indexPath.row) {
-            case 0:
-                    txtField.text = tname;
-                    [txtField setPlaceholder :@"Name"];
+        
+        static NSString *cellIdentifier = @"cell";
+        UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellIdentifier];
+            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+            // Add the text field or add the text view.
+            // Set the tag value to some value like 1.
+            
+            UITextField *textField = [[UITextField alloc] init];
+            [textField setTag:1];
+            textField.delegate = self;
+            CGRect frame = cell.frame;
+            
+            frame.origin.x = cell.frame.origin.x + 10;
+            frame.origin.y = cell.frame.origin.y + 10;
+            frame.size.width = 350;
+            [textField setFrame:frame];
+            if(aTableView == topTableView){
+                [cell.contentView addSubview:textField];
+                switch (indexPath.row) {
+                    case 0:
+                        textField.text = tname;
+                        [textField setPlaceholder :@"Name"];
+                        
+                        break;
+                    case 1:
+                        
+                        [textField setPlaceholder :@"Distillery"];
+                        textField.text = tdistillery;
+                        NSLog(@"DISTILLERY: %@", tdistillery);
+                        
+                        break;
+                    case 2:
+                        textField.text = tage;
+                        [textField setPlaceholder :@"Age Statement"];
+                        NSLog(@"AGE: %@", tage);
+                        
+                        break;
+                    case 3:
+                        textField.text = tstrength;
+                        [textField setPlaceholder :@"Strength"];
+                        
+                        break;
+                        
+                    default:
+                        break;
+                }
                 
-                break;
-            case 1:
-                
-                    [txtField setPlaceholder :@"Distillery"];
-                    txtField.text = tdistillery;
-                    NSLog(@"DISTILLERY: %@", tdistillery);
-                
-                break;
-            case 2:
-                    txtField.text = tage;
-                    [txtField setPlaceholder :@"Age Statement"];
-                    NSLog(@"AGE: %@", tage);
-                
-                break;
-            case 3:
-                    txtField.text = tstrength;
-                    [txtField setPlaceholder :@"Strength"];
-                
-                break;
-                
-            default:
-                break;
+            }
         }
+        return cell;
+    }else{
         
-        [cell.contentView addSubview:txtField];
-
-    }
-    else{
-        
-        CGRect frame = cell.frame;
-        if(isPad){
+        static NSString *cellIdentifier = @"cellbottom";
+        UITableViewCell *bottomCell = [aTableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (bottomCell == nil) {
+            bottomCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellIdentifier];
+            [bottomCell setSelectionStyle:UITableViewCellSelectionStyleNone];
+            CGRect frame = bottomCell.frame;
             if ([[UIDevice currentDevice] orientation] == UIDeviceOrientationPortrait) {
-                frame.origin.x = cell.frame.origin.x + 0;
-                frame.origin.y = cell.frame.origin.y + 5;
+                frame.origin.x = bottomCell.frame.origin.x + 0;
+                frame.origin.y = bottomCell.frame.origin.y + 5;
                 frame.size.width = 680;
             }else{
-                frame.origin.x = cell.frame.origin.x + 0;
-                frame.origin.y = cell.frame.origin.y + 5;                
+                frame.origin.x = bottomCell.frame.origin.x + 0;
+                frame.origin.y = bottomCell.frame.origin.y + 5;
                 frame.size.width = 615;
-
             }
             if(indexPath.row == 3){
                 frame.size.height = 44;
             }else{
                 frame.size.height = 90;
             }
-        }else{
-            frame.origin.x = cell.frame.origin.x + 5;
-            frame.origin.y = cell.frame.origin.y + 5;
-            frame.size.width = 275;
-            if(indexPath.row == 3){
-                frame.size.height = 44;
-            }else{
-                frame.size.height = 90;
-            }
-        }
-        switch (indexPath.row) {
-            case 0:
-            {
-                NSLog(@"INDEXPATH ROW: %i", indexPath.row);
-                UIPlaceHolderTextView *txtView = [[UIPlaceHolderTextView alloc] init];
-                txtView.delegate = self;
-                [txtView setFont:[UIFont systemFontOfSize:16.0f]];
-                [txtView setFrame:frame];
+            UIPlaceHolderTextView *txtView = [[UIPlaceHolderTextView alloc] init];
+            txtView.delegate = self;
+            [txtView setFont:[UIFont systemFontOfSize:16.0f]];
+            [txtView setFrame:frame];
+            [txtView setBackgroundColor:[UIColor clearColor]];
+            [bottomCell.contentView addSubview:txtView];
+            switch (indexPath.row) {
+                case 0:
+                {
+                    NSLog(@"INDEXPATH ROW: %i", indexPath.row);
                     txtView.text = tnose;
                     [txtView setPlaceholder :@"Nose"];
-                
-                [txtView setBackgroundColor:[UIColor clearColor]];
-                
-                [cell.contentView addSubview:txtView];
-            }
-                break;
-            case 1:
-            {
-                NSLog(@"INDEXPATH ROW: %i", indexPath.row);
-                UIPlaceHolderTextView *txtView = [[UIPlaceHolderTextView alloc] init];
-                txtView.delegate = self;
-                [txtView setFont:[UIFont systemFontOfSize:16.0f]];
-                [txtView setFrame:frame];
-
+                    
+                }
+                    break;
+                case 1:
+                {
                     txtView.text = tfinish;
-                    
                     [txtView setPlaceholder :@"Finish"];
-                [txtView setBackgroundColor:[UIColor clearColor]];
-                [cell.contentView addSubview:txtView];
-            }
-                break;
-            case 2:
-            {
-                NSLog(@"INDEXPATH ROW: %i", indexPath.row);
-                UIPlaceHolderTextView *txtView = [[UIPlaceHolderTextView alloc] init];
-                txtView.delegate = self;
-                [txtView setFont:[UIFont systemFontOfSize:16.0f]];
-                [txtView setFrame:frame];
-
-                    txtView.text = toverall;
                     
+                }
+                    break;
+                case 2:
+                {
+                    txtView.text = toverall;
                     [txtView setPlaceholder :@"Overall"];
-               
-                [txtView setBackgroundColor:[UIColor clearColor]];
-                
-                [cell.contentView addSubview:txtView];
-            }
-                break;
-            case 3:
-            {
-                NSLog(@"INDEXPATH ROW: %i", indexPath.row);
-                UIPlaceHolderTextView *txtView = [[UIPlaceHolderTextView alloc] init];
-                txtView.delegate = self;
-                [txtView setFont:[UIFont systemFontOfSize:16.0f]];
-                [txtView setFrame:frame];
-
-                
+                    
+                }
+                    break;
+                case 3:
+                {
                     txtView.text = trating;
                     [txtView setPlaceholder :@"Rating"];
-                
-                [txtView setBackgroundColor:[UIColor clearColor]];
-                
-                [cell.contentView addSubview:txtView];
+                    
+                }
+                    break;
+                default:
+                    break;
+                    
             }
-                break;
-            default:
-                break;
-                
         }
-        
-        
+        return bottomCell;
+
     }
-    return cell;
+    return nil;
 }
 
 -(UIView *) tableView:(UITableView *)aTableView viewForHeaderInSection:(NSInteger)section
 {
-    if(isPad){
         UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(0,0,500,400)];
         
         if (aTableView == tableView) {
             // create the parent view that will hold header Label
             
             // create the label objects
-            topTableView = [[UITableView alloc] initWithFrame:CGRectMake(260, 10, 400, 200) style:UITableViewStyleGrouped];
-            [topTableView setDelegate:self];
-            [topTableView setDataSource:self];
-            topTableView.backgroundView = nil;
-            topTableView.backgroundColor = self.view.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:240.0f/255.0f alpha:1.0f];
-            
+            if(topTableView == nil){
+                topTableView = [[UITableView alloc] initWithFrame:CGRectMake(260, 10, 400, 200) style:UITableViewStyleGrouped];
+                [topTableView setDelegate:self];
+                [topTableView setDataSource:self];
+                topTableView.backgroundView = nil;
+                topTableView.backgroundColor = self.view.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:240.0f/255.0f alpha:1.0f];
+            }
             //topTableView.backgroundColor = [UIColor cyanColor];
             // create the imageView with the image in it
-            imgView = [[UIImageView alloc] initWithImage:myImg];
-            imgView.frame = CGRectMake(50,10,200,200);
-           imgView.contentMode = UIViewContentModeScaleAspectFit;
-            imageBtn = [[UIButton alloc] init];
-            imageBtn.frame = imgView.frame;
-            if(isPad){
+            if(imgView == nil){
+                imgView = [[UIImageView alloc] initWithImage:myImg];
+            }
+                imgView.frame = CGRectMake(50,10,200,200);
+                imgView.contentMode = UIViewContentModeScaleAspectFit;
+            if(imageBtn == nil){
+                imageBtn = [[UIButton alloc] init];
+            }
+                imageBtn.frame = imgView.frame;
                 [imageBtn addTarget:self action:@selector(choosePhoto) forControlEvents:UIControlEventTouchUpInside];
                 
-            }else{
-                [imageBtn addTarget:self action:@selector(showActionSheet:) forControlEvents:UIControlEventTouchUpInside];
-            }
-            [imageBtn setAlpha:1.0f];
-            [imageBtn setBackgroundColor:[UIColor clearColor]];
-            [customView addSubview:imgView];
-            [customView addSubview:imageBtn];
-            [customView addSubview:topTableView];
+                
+                [imageBtn setAlpha:1.0f];
+                [imageBtn setBackgroundColor:[UIColor clearColor]];
+                [customView addSubview:imgView];
+                [customView addSubview:imageBtn];
+                [customView addSubview:topTableView];
             //        [customView addSubview:detailLabel];
             
-            return customView;
+                return customView;
             
         }
         return customView;
     
-    }else {
-        UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(0,0,500,400)];
-        
-        if (aTableView == tableView) {
-            // create the parent view that will hold header Label
-            
-            // create the label objects
-            topTableView = [[UITableView alloc] initWithFrame:CGRectMake(130, 0, 190, 220) style:UITableViewStyleGrouped];
-            [topTableView setDelegate:self];
-            [topTableView setDataSource:self];
-            topTableView.backgroundView = nil;
-            topTableView.backgroundColor = self.view.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:240.0f/255.0f alpha:1.0f];
-            
-            //topTableView.backgroundColor = [UIColor cyanColor];
-            // create the imageView with the image in it
-            imgView = [[UIImageView alloc] initWithImage:myImg];
-            imgView.frame = CGRectMake(10,20,120,120);
-            imageBtn = [[UIButton alloc] init];
-            imageBtn.frame = imgView.frame;
-            [imageBtn addTarget:self action:@selector(showActionSheet:) forControlEvents:UIControlEventTouchUpInside];
-            [imageBtn setAlpha:1.0f];
-            [imageBtn setBackgroundColor:[UIColor clearColor]];
-            [customView addSubview:imgView];
-            [customView addSubview:imageBtn];
-            [customView addSubview:topTableView];
-            //        [customView addSubview:detailLabel];
-            
-            return customView;
-            
-        }
-        return customView;
-    }
+    
+//    }else {
+//        UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(0,0,500,400)];
+//        
+//        if (aTableView == tableView) {
+//            // create the parent view that will hold header Label
+//            
+//            // create the label objects
+//            topTableView = [[UITableView alloc] initWithFrame:CGRectMake(130, 0, 190, 220) style:UITableViewStyleGrouped];
+//            [topTableView setDelegate:self];
+//            [topTableView setDataSource:self];
+//            topTableView.backgroundView = nil;
+//            topTableView.backgroundColor = self.view.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:240.0f/255.0f alpha:1.0f];
+//            
+//            //topTableView.backgroundColor = [UIColor cyanColor];
+//            // create the imageView with the image in it
+//            imgView = [[UIImageView alloc] initWithImage:myImg];
+//            imgView.frame = CGRectMake(10,20,120,120);
+//            imageBtn = [[UIButton alloc] init];
+//            imageBtn.frame = imgView.frame;
+//            [imageBtn addTarget:self action:@selector(showActionSheet:) forControlEvents:UIControlEventTouchUpInside];
+//            [imageBtn setAlpha:1.0f];
+//            [imageBtn setBackgroundColor:[UIColor clearColor]];
+//            [customView addSubview:imgView];
+//            [customView addSubview:imageBtn];
+//            [customView addSubview:topTableView];
+//            //        [customView addSubview:detailLabel];
+//            
+//            return customView;
+//            
+//        }
+//        return customView;
+//    }
 
 }
 

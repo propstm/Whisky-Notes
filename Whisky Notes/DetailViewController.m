@@ -66,7 +66,7 @@
     //Secondary run - grab correct item that's been passed
     if (self.detailItem) {
         
-        UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(editObject)];
+        UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editObject)];
         self.navigationItem.rightBarButtonItem = editButton;
         //(WhiskyItemObject *)
         [self detailItem];

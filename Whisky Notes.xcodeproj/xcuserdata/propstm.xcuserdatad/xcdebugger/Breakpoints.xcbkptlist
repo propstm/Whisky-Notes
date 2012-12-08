@@ -22,11 +22,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Whisky Notes/AddEntryVC_iPad.m"
-         timestampString = "376487838.089565"
+         timestampString = "376542264.983248"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "582"
-         endingLineNumber = "582"
+         startingLineNumber = "543"
+         endingLineNumber = "543"
          landmarkName = "-clickedCancelButton:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -61,11 +61,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Whisky Notes/AddEntryVC_iPad.m"
-         timestampString = "376487838.089565"
+         timestampString = "376542264.983248"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "559"
-         endingLineNumber = "559"
+         startingLineNumber = "520"
+         endingLineNumber = "520"
          landmarkName = "-clickedButton:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -74,11 +74,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Whisky Notes/AddEntryVC_iPad.m"
-         timestampString = "376487838.089565"
+         timestampString = "376542264.983248"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "542"
-         endingLineNumber = "542"
+         startingLineNumber = "503"
+         endingLineNumber = "503"
          landmarkName = "-clickedButton:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -87,25 +87,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Whisky Notes/AddEntryVC_iPad.m"
-         timestampString = "376487838.089565"
+         timestampString = "376542264.983248"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "551"
-         endingLineNumber = "551"
+         startingLineNumber = "512"
+         endingLineNumber = "512"
          landmarkName = "-clickedButton:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Whisky Notes/AddEntryVC_iPad.m"
-         timestampString = "376487838.089565"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "267"
-         endingLineNumber = "267"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -113,12 +100,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Whisky Notes/AddEntryVC_iPad.m"
-         timestampString = "376487838.089565"
+         timestampString = "376593781.236489"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "414"
-         endingLineNumber = "414"
-         landmarkName = "-tableView:viewForHeaderInSection:"
+         startingLineNumber = "171"
+         endingLineNumber = "171"
+         landmarkName = "-keyboardDidHide:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Whisky Notes/AddEntryVC_iPad.m"
+         timestampString = "376668750.243398"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "139"
+         endingLineNumber = "139"
+         landmarkName = "-keyboardDidShow:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
