@@ -65,15 +65,6 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
-    nsma = [[CoreDataManager sharedManager] getAllWhiskies];
-    if([nsma count] == 0){
-        AddEntryVC_iPad *aevc = [[AddEntryVC_iPad alloc] initWithNibName:@"AddEntryVC_iPad" bundle:nil];
-        if(isPad){
-            [self.detailViewController.navigationController pushViewController:aevc animated:YES];
-        }else{
-            [self.navigationController pushViewController:aevc animated:YES];
-        }
-    }
 }
 
 - (void)viewDidUnload

@@ -400,6 +400,7 @@
 								<string key="NSFrame">{{208, 345}, {500, 21}}</string>
 								<reference key="NSSuperview" ref="610113547"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:345</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -425,14 +426,14 @@
 								<reference key="NSSuperview" ref="610113547"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="70664687"/>
-								<object class="NSColor" key="IBUIBackgroundColor" id="33107367">
+								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MQA</bytes>
+									<bytes key="NSWhite">MCAwAA</bytes>
 								</object>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<string key="IBUIText">Detail view content goes here</string>
+								<string key="IBUIText"/>
 								<reference key="IBUITextColor" ref="786766053"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
@@ -454,11 +455,12 @@
 							<object class="IBUIImageView" id="70664687">
 								<reference key="NSNextResponder" ref="610113547"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{30, 55}, {150, 150}}</string>
+								<string key="NSFrame">{{25, 48}, {175, 170}}</string>
 								<reference key="NSSuperview" ref="610113547"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="262210945"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<int key="IBUIContentMode">1</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 							</object>
@@ -479,7 +481,10 @@
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="610113547"/>
-				<reference key="IBUIBackgroundColor" ref="33107367"/>
+				<object class="NSColor" key="IBUIBackgroundColor">
+					<int key="NSColorSpace">3</int>
+					<bytes key="NSWhite">MQA</bytes>
+				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
 					<int key="IBUIStatusBarStyle">2</int>
@@ -895,10 +900,6 @@
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1536" key="NS.object.0"/>
-		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<string key="IBCocoaTouchPluginVersion">1930</string>

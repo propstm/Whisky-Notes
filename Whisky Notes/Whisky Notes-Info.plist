@@ -19,7 +19,10 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>Icon-72.png</string>
+				<string>Icon-72@2x.png</string>
 			</array>
+			<key>UIPrerenderedIcon</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
@@ -42,6 +45,8 @@
 	<array>
 		<string>Futura</string>
 	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -58,7 +58,7 @@
 
     
     self.title = @"Add/Edit Entry";
-    myImg = [UIImage imageNamed:@"madiera.jpg"];
+    myImg = [UIImage imageNamed:@"selectImage.png"];
     
     //imgView.contentMode = UIViewContentModeScaleAspectFill;
     // Do any additional setup after loading the view from its nib.
@@ -88,19 +88,6 @@
         uuidField = nil;
     }
 
-    //if(imgView.image
-    //if([imgView.image.imageNamed:@"madiera.jpg" isEqualToString: @"madiera.jpg"]){
-
-    if(imgView.image == [UIImage imageNamed:@"madiera.jpg"]){
-        NSLog(@"image is madiera");
-//        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"A Message To Display"
-//                                                                 delegate:self
-//                                                        cancelButtonTitle:@"Cancel"
-//                                                   destructiveButtonTitle:nil
-//                                                        otherButtonTitles:@"Test1",@"Test2",nil];
-//        [actionSheet showInView:self.view];
-//        [actionSheet autorelease];
-    }
     //[self.imgView.image release];
     NSLog(@"ORIGINAL FRAME WIDTH: %f", tableView.frame.size.width);
     NSLog(@"ORIGINAL FRAME HEIGHT: %f", tableView.frame.size.height);
@@ -109,7 +96,17 @@
 }
 - (void) viewWillAppear:(BOOL)animated 
 {
-    [activityIndicator setAlpha:1.0f];
+    NSMutableArray *nsma = [[CoreDataManager sharedManager] getAllWhiskies];
+    if([nsma count] == 0){
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Missing Content"
+                              message: @"You must have added at least one review in order to browse content.  Please add an entry."
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
+    [activityIndicator setAlpha:0.0f];
 	[super viewWillAppear:animated];
 	NSLog(@"Registering for keyboard events");
     
@@ -232,25 +229,42 @@
                 [cell.contentView addSubview:textField];
                 switch (indexPath.row) {
                     case 0:
-                        textField.text = tname;
+                        NSLog(@"tname: %@", tname);
+                        if(![tname isEqualToString:@"(null)"]){
+                            textField.text = tname;
+                        }else{
+                            textField.text = @"";
+                        }
                         [textField setPlaceholder :@"Name"];
                         
                         break;
                     case 1:
-                        
+                        if(![tdistillery isEqualToString:@"(null)"]){
+                            textField.text = tdistillery;
+                        }else{
+                            textField.text = @"";
+                        }
                         [textField setPlaceholder :@"Distillery"];
-                        textField.text = tdistillery;
+                        
                         NSLog(@"DISTILLERY: %@", tdistillery);
                         
                         break;
                     case 2:
-                        textField.text = tage;
+                            if(![tage isEqualToString:@"(null)"]){
+                                textField.text = tage;
+                            }else{
+                                textField.text = @"";
+                            }
                         [textField setPlaceholder :@"Age Statement"];
                         NSLog(@"AGE: %@", tage);
                         
                         break;
                     case 3:
-                        textField.text = tstrength;
+                        if(![tstrength isEqualToString:@"(null)"]){
+                            textField.text = tstrength;
+                        }else{
+                            textField.text = @"";
+                        }
                         [textField setPlaceholder :@"Strength"];
                         
                         break;
@@ -294,28 +308,44 @@
                 case 0:
                 {
                     NSLog(@"INDEXPATH ROW: %i", indexPath.row);
-                    txtView.text = tnose;
+                    if(![tnose isEqualToString:@"(null)"]){
+                        txtView.text = tnose;                        
+                    }else{
+                        txtView.text = @"";
+                    }
                     [txtView setPlaceholder :@"Nose"];
                     
                 }
                     break;
                 case 1:
                 {
-                    txtView.text = tfinish;
+                    if(![tfinish isEqualToString:@"(null)"]){
+                        txtView.text = tfinish;
+                    }else{
+                        txtView.text = @"";
+                    }
                     [txtView setPlaceholder :@"Finish"];
                     
                 }
                     break;
                 case 2:
                 {
-                    txtView.text = toverall;
+                    if(![toverall isEqualToString:@"(null)"]){
+                        txtView.text = toverall;
+                    }else{
+                        txtView.text = @"";
+                    }
                     [txtView setPlaceholder :@"Overall"];
                     
                 }
                     break;
                 case 3:
                 {
-                    txtView.text = trating;
+                    if(![trating isEqualToString:@"(null)"]){
+                        txtView.text = trating;
+                    }else{
+                        txtView.text = @"";
+                    }
                     [txtView setPlaceholder :@"Rating"];
                     
                 }
@@ -502,55 +532,99 @@
 
 
 -(IBAction)clickedButton:(id)sender{
+    
+    if(![self validated]){
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Validation Error"
+                              message: @"Name is a required field"
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
     [activityIndicator setAlpha:1.0f];
     UIView *blockerView = [[UIView alloc] initWithFrame:[self.view frame]];
     [blockerView setBackgroundColor:[UIColor blackColor]];
+    [blockerView setAlpha:0.7f];
     [self.view addSubview:blockerView];
-    
-    
-    wio = [[WhiskyItemObject alloc] init];
-    [wio setName : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
-    [wio setTimeStamp:[[NSDate alloc] init]];
-    [wio setCompany : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
-    [wio setBrand : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
-    [wio setAge_statement : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
-    [wio setStrength : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
-
-    [wio setNose : [(UIPlaceHolderTextView *)[[[[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
-    [wio setFinish : [(UIPlaceHolderTextView *)[[[[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
-    [wio setOverall : [(UIPlaceHolderTextView *)[[[[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
-    [wio setRating : [(UIPlaceHolderTextView *)[[[[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
-    NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(imgView.image)];
-
-    [wio setPhoto:imageData];
-   
-    NSLog(@"UUID FIELD: %@", uuidField);
-    if(uuidField == nil){
-        NSLog(@"nil");
-        [wio setUuid : [[CoreDataManager sharedManager] uuid]];
-    }else{
-        NSLog(@"not nil -- null i guess?");
-        [wio setUuid : uuidField];
-        
-    }
-    NSLog(@"FIRST WIO: %@", wio);
-    NSLog(@"FIRST NAME: %@", [wio name]);
-    NSLog(@"FRST UUID: %@", [wio uuid]);
-
-    [[CoreDataManager sharedManager] addOrUpdateWhisky:wio];
+    [activityIndicator removeFromSuperview];
     [activityIndicator setAlpha:1.0f];
-    [self.view removeFromSuperview];
+    [self.view addSubview:activityIndicator];
+    UILabel *savingText = [[UILabel alloc] initWithFrame:CGRectMake(activityIndicator.frame.origin.x-35, activityIndicator.frame.origin.y+40, 170, 40)];
+    savingText.text = @"Saving...";
+    savingText.textColor = [UIColor whiteColor];
+    savingText.backgroundColor = [UIColor clearColor];
+    [savingText setFont:[UIFont fontWithName:@"Futura" size:(isPad) ? 32.0f : 14.0f]];
+    [blockerView addSubview:savingText];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    
+    dispatch_async(queue, ^{
+        wio = [[WhiskyItemObject alloc] init];
+        [wio setName : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
+        [wio setTimeStamp:[[NSDate alloc] init]];
+        [wio setCompany : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
+        [wio setBrand : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
+        [wio setAge_statement : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
+        [wio setStrength : [(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
+        
+        [wio setNose : [(UIPlaceHolderTextView *)[[[[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
+        [wio setFinish : [(UIPlaceHolderTextView *)[[[[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
+        [wio setOverall : [(UIPlaceHolderTextView *)[[[[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
+        [wio setRating : [(UIPlaceHolderTextView *)[[[[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]]contentView]subviews]objectAtIndex:0]text]];
+        NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(imgView.image)];
+        if(imgView.image != [UIImage imageNamed:@"selectImage.png"]){
+            [wio setPhoto:imageData];
+        }else{
+            [wio setPhoto:nil];
+        }
+        
+        NSLog(@"UUID FIELD: %@", uuidField);
+        if(uuidField == nil){
+            NSLog(@"nil");
+            [wio setUuid : [[CoreDataManager sharedManager] uuid]];
+        }else{
+            NSLog(@"not nil -- null i guess?");
+            [wio setUuid : uuidField];
+            
+        }
+        NSLog(@"FIRST WIO: %@", wio);
+        NSLog(@"FIRST NAME: %@", [wio name]);
+        NSLog(@"FRST UUID: %@", [wio uuid]);
+        
+        [[CoreDataManager sharedManager] addOrUpdateWhisky:wio];
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [activityIndicator setAlpha:1.0f];
+            [blockerView removeFromSuperview];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadRootTable" object:nil];
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+    });
+    
 //    itemWhisky = [[CoreDataManager sharedManager] getLastWhisky];
 //    
 //    NSLog(@"%@", itemWhisky);
 //    NSLog(@"%@", [itemWhisky uuid]);
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadRootTable" object:nil];
-    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 -(IBAction)clickedCancelButton:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
+    NSMutableArray *nsma = [[CoreDataManager sharedManager] getAllWhiskies];
+    if([nsma count] == 0){
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Missing Content"
+                              message: @"You must have added at least one review in order to browse content.  Please add an entry."
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+    }else{
+
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 
@@ -669,7 +743,7 @@
     if([wio photo] != nil){
         myImg = [[UIImage alloc] initWithData: [wio photo]];
     }else{
-        imgView.image = [UIImage imageNamed:@"madiera.jpg"];
+        imgView.image = [UIImage imageNamed:@""];
     }
 }
 
@@ -751,6 +825,14 @@
 	}*/
     
 
+}
+
+- (BOOL)validated{
+    if([[(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]contentView]subviews]objectAtIndex:0]text] isEqualToString:@""] || [[(UIPlaceHolderTextView *)[[[[topTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]contentView]subviews]objectAtIndex:0]text] isEqualToString:@"(null)"]){
+        return FALSE;
+    }
+    return TRUE;
+    
 }
 
 #pragma mark - TextField Delegate Methods

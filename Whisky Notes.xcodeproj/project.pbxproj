@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		960C403B1533668B00DFA3F9 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 960C403A1533668B00DFA3F9 /* Item.m */; };
+		9639143C167698CC004F4F5B /* selectImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 9639143B167698CC004F4F5B /* selectImage.png */; };
 		9639300B152CF9E400806C26 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9639300A152CF9E400806C26 /* AssetsLibrary.framework */; };
 		968620B316739B760054DD11 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 968620B216739B760054DD11 /* Icon-72.png */; };
 		968620B51673B7D70054DD11 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 968620B41673B7D70054DD11 /* Default-Landscape~ipad.png */; };
@@ -23,6 +24,8 @@
 		9698DB831524AD3400F6F23D /* AddEntryVC_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9698DB811524AD3400F6F23D /* AddEntryVC_iPad.xib */; };
 		9698DB851524BD8700F6F23D /* madiera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9698DB841524BD8700F6F23D /* madiera.jpg */; };
 		9698DB881524DC1200F6F23D /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9698DB871524DC1200F6F23D /* UIPlaceHolderTextView.m */; };
+		96A07D031677A95300E265E2 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A07D021677A95300E265E2 /* Icon-72@2x.png */; };
+		96A07D0516780C1500E265E2 /* defaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A07D0416780C1500E265E2 /* defaultImage.png */; };
 		96A98E8F14E0AF9300E5B206 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A98E8E14E0AF9300E5B206 /* CoreDataManager.m */; };
 		96A98E9614E0B3E500E5B206 /* WhiskyItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A98E9514E0B3E500E5B206 /* WhiskyItemObject.m */; };
 		96B31BFE14D8D80D00D3B8A6 /* AddEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B31BFC14D8D80D00D3B8A6 /* AddEntryViewController.m */; };
@@ -65,6 +68,7 @@
 /* Begin PBXFileReference section */
 		960C40391533668B00DFA3F9 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		960C403A1533668B00DFA3F9 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		9639143B167698CC004F4F5B /* selectImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectImage.png; sourceTree = "<group>"; };
 		9639300A152CF9E400806C26 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		968620B216739B760054DD11 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		968620B41673B7D70054DD11 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 		9698DB841524BD8700F6F23D /* madiera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = madiera.jpg; sourceTree = "<group>"; };
 		9698DB861524DC1100F6F23D /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
 		9698DB871524DC1200F6F23D /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		96A07D021677A95300E265E2 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		96A07D0416780C1500E265E2 /* defaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultImage.png; sourceTree = "<group>"; };
 		96A98E8D14E0AF9300E5B206 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		96A98E8E14E0AF9300E5B206 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		96A98E9414E0B3E500E5B206 /* WhiskyItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskyItemObject.h; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 				968620B61673B86C0054DD11 /* Default-Portrait~ipad.png */,
 				968620B41673B7D70054DD11 /* Default-Landscape~ipad.png */,
 				968620B216739B760054DD11 /* Icon-72.png */,
+				96A07D021677A95300E265E2 /* Icon-72@2x.png */,
 				96E9AA81153E1D7300CC1481 /* AppStoreSubmissionV1b.mobileprovision */,
 				9639300A152CF9E400806C26 /* AssetsLibrary.framework */,
 				9698DB7115239E9A00F6F23D /* Common.h */,
@@ -195,6 +202,8 @@
 		96CC19F2149D3B4D0015EE52 /* Whisky Notes */ = {
 			isa = PBXGroup;
 			children = (
+				96A07D0416780C1500E265E2 /* defaultImage.png */,
+				9639143B167698CC004F4F5B /* selectImage.png */,
 				9698DB841524BD8700F6F23D /* madiera.jpg */,
 				9698DB641520B9DD00F6F23D /* UILabel+VerticalAlign.h */,
 				9698DB651520B9DE00F6F23D /* UILabel+VerticalAlign.m */,
@@ -348,6 +357,9 @@
 				968620B316739B760054DD11 /* Icon-72.png in Resources */,
 				968620B51673B7D70054DD11 /* Default-Landscape~ipad.png in Resources */,
 				968620B71673B86C0054DD11 /* Default-Portrait~ipad.png in Resources */,
+				9639143C167698CC004F4F5B /* selectImage.png in Resources */,
+				96A07D031677A95300E265E2 /* Icon-72@2x.png in Resources */,
+				96A07D0516780C1500E265E2 /* defaultImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +516,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matt Propst (HMR7Z4S63Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matthew Propst";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matthew Propst";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -514,7 +526,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "C769A7F1-1AF7-402D-99DA-B5D29C8CF1B8";
+				PROVISIONING_PROFILE = "0C5C4FF5-7F13-468E-9EA8-FC5FC2FEDE73";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0C5C4FF5-7F13-468E-9EA8-FC5FC2FEDE73";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

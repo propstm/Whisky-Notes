@@ -106,8 +106,12 @@
         self.nameLbl.text = [self.detailItem name];
         self.ageLbl.text = [self.detailItem age_statement];
         self.strengthLbl.text = [NSString stringWithFormat:@"%@",[self.detailItem strength] ];
-        UIImage *img = [[UIImage alloc] initWithData:[self.detailItem photo]]; 
-        self.boozeImg = img; 
+        if([self.detailItem photo] == nil){
+            self.boozeImg = [UIImage imageNamed:@"defaultImage.png"];
+        }else{
+            UIImage *img = [[UIImage alloc] initWithData:[self.detailItem photo]];
+            self.boozeImg = img;            
+        }
         //SET SIZE OF INTERESTING STUFF
         picHolder.contentMode = UIViewContentModeScaleAspectFit;
         
@@ -135,7 +139,12 @@
         
         //POSITION RELATIVE TO LAST ITEM;
         frame = [self.finishLbl frame];
-        frame.origin.y = noseLbl.frame.origin.y + noseLbl.frame.size.height + 15;
+        if(![noseLbl.text isEqualToString:@""]){
+            frame.origin.y = noseLbl.frame.origin.y + noseLbl.frame.size.height + 15;
+        }else{
+            frame.origin.y = noseLbl.frame.origin.y + noseLbl.frame.size.height + 35;
+            
+        }
         if(!isPad){
             
             frame.origin.x = self.finishTitleLbl.frame.size.width - 50;
@@ -169,7 +178,13 @@
         
         //POSITION RELATIVE TO LAST ITEM;
         frame = [self.overallLbl frame];
-        frame.origin.y = finishLbl.frame.origin.y + finishLbl.frame.size.height + 15;
+        if(![finishLbl.text isEqualToString:@""]){
+            frame.origin.y = finishLbl.frame.origin.y + finishLbl.frame.size.height + 15;
+            
+        }else{
+            frame.origin.y = finishLbl.frame.origin.y + finishLbl.frame.size.height + 35;
+            
+        }
         
         if(!isPad){
             
@@ -198,7 +213,12 @@
         
         //POSITION RELATIVE TO LAST ITEM;
         frame = [self.ratingLbl frame];
-        frame.origin.y = overallLbl.frame.origin.y + overallLbl.frame.size.height + 15;
+        if(![overallLbl.text isEqualToString:@""]){
+            frame.origin.y = overallLbl.frame.origin.y + overallLbl.frame.size.height + 15;
+            
+        }else{
+            frame.origin.y = overallLbl.frame.origin.y + overallLbl.frame.size.height + 35;
+        }
         [self.ratingLbl setFrame:frame];
         if(!isPad){
             
@@ -291,6 +311,15 @@
 {
     self.view.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:240.0f/255.0f alpha:1.0f];
     [super viewWillAppear:animated];
+    NSMutableArray *nsma = [[CoreDataManager sharedManager] getAllWhiskies];
+    if([nsma count] == 0){
+        AddEntryVC_iPad *aevc = [[AddEntryVC_iPad alloc] initWithNibName:@"AddEntryVC_iPad" bundle:nil];
+        if(isPad){
+            [self.navigationController pushViewController:aevc animated:YES];
+        }else{
+            [self.navigationController pushViewController:aevc animated:YES];
+        }
+    }
     
 }
 
@@ -358,7 +387,7 @@
 
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
 {
-    barButtonItem.title = @"";
+    barButtonItem.title = @"Reviews";
     [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
     self.masterPopoverController = popoverController;
 }
